@@ -1,0 +1,265 @@
+@use "componentes";
+
+@mixin section-display {
+    width: 100%;
+    max-width: 868px;
+    margin: auto;
+    padding: 4rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+/*seccion de nav*/
+.nav {
+    width: 100%;
+    height: 5rem;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgb(50, 137, 251);
+    .logo {
+        width: 13rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        a {
+            text-decoration: none;
+        }
+        
+        .logo-title {
+            max-width: 7rem;
+            margin-bottom: 0;
+            color: componentes.$color-main;
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+/* seccion de home*/
+.sec-home {
+    display: flex;
+    align-items: center;
+    @include section-display();
+    .home-cta {
+        flex:1;
+        .cta-text {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            color: componentes.$color-main;
+            font-weight: bold;
+            i {
+                font-size: 26px;
+            }
+        }
+    }
+    .home-title {
+        font-size: 3rem;
+        font-weight: 600;
+        width: 20rem;
+    }
+    .home-description {
+        width: 22rem;
+        font-weight: 700;
+    }
+    .home-img {
+        img {
+            width:15rem;
+        }
+    }
+}
+
+/*seccion de features*/
+.sec-feactures {
+    display: flex;
+    flex-direction: column;
+    @include section-display();
+    padding:0;
+    .intro {
+        text-align: center;
+        h3 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 0.9rem;
+            color: #888;
+        }
+    }
+    .puntos {
+        display: flex;
+        justify-content: space-around;
+        .textOne {
+            margin-bottom: 3rem;
+            .element {
+                display: flex;
+                width: 22rem;
+                margin-top: -1rem;
+                margin-bottom: -2.5rem;
+                padding: 0.2rem;
+                align-items: center;
+                gap:1.50rem;
+                .text-description{
+                    margin-top: 3rem;
+                    
+                    .text-title{
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                    }
+                    .text-parrafo{
+                        font-size: 0.8rem;
+                        color: rgb(115, 113, 113);
+                    }
+                }
+            }
+        }
+        .img {
+            img{
+                max-width: 25rem;
+                min-height: 24rem;
+            }
+        }
+    }
+}
+
+/* seccion de benefits*/
+.sec-benefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    .beneficts-title {
+        padding-top: 2rem;
+        border-top: 1px solid rgb(194, 190, 190);
+        text-align: center;
+        @extend .sec-feactures, .intro;
+        p {
+            font-size: 0.9rem;
+            color: #888;
+        }
+    }
+    .beneficts-tarjetas {
+        width: 70%;
+        gap:20px
+    }
+    .caja2 {
+        margin-top: -1.3rem;
+    }
+}
+
+/*seccion de kpis*/
+.sec-kpis {
+    width: 100%;
+    margin-top: 4rem;
+    text-align: center;
+    background-color: componentes.$color-main;
+    color:white;
+    padding: 3rem;
+    .kpi-1 {
+        display: flex;
+        flex-direction: column;
+        .number {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+        .trade {
+            font-size: 0.8rem;
+            color: rgb(202, 202, 202);
+        }
+    }
+}
+
+/*seccion de onboarding*/
+.sec-onboarding {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 4rem;
+    .onboarding-title {
+        @extend .sec-feactures, .intro;
+        p {
+            font-size: 0.9rem;
+            color: #888;
+        }
+    }
+    .steps {
+        margin-top: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .step-separator {
+            flex: 0.3;
+            border-top: 2px solid rgb(214, 214, 214);
+            margin: 0 1.5rem;
+        }
+    }
+}
+
+/*seccion de footer*/
+.sec-footer-cta {
+    display: flex;
+    width: 100%;
+    height: 22.5rem;
+    margin-top:5rem;
+    margin-bottom: 4rem;
+    .caja-footer {
+        width: 35%;
+        background-color: transparent;
+        padding: 3rem;
+        margin-left: 8rem;
+        margin-top: 4rem;
+        position: absolute;
+        z-index: 1;
+        .title-footer {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        .parrafo-footer {
+            font-size: 0.9rem;
+            color: #888;
+        }
+    }
+    
+    .img-footer {
+        background-color: componentes.$color-footer;
+        width: 65%;
+        height: 20rem;
+        margin-top: 1.5rem;
+        margin-left: 26rem;
+        display: flex;
+        position: absolute;
+        img {
+            position: relative;
+            margin-left: 19.7rem;
+            width: 35rem;
+            height: 17rem;
+    
+        }
+    }
+   
+}
+
+@media(max-width:768px) {
+
+    .sec-onboarding {
+        .steps {
+            flex-direction: column;
+        }
+    }
+
+    .sec-footer-cta{
+        width: 100%;
+        background-color: componentes.$color-footer;
+        .caja-footer{
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+
+

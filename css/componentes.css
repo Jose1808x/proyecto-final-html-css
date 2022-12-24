@@ -1,0 +1,110 @@
+.container {
+  padding: 1.8rem;
+}
+
+.btn-main, .btn-main-s {
+  font-size: 1.2rem;
+  padding: 0.4rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: 0.4s;
+  background-color: #0075ff;
+  color: white;
+  border: 1px solid #0075ff;
+}
+.btn-main:hover, .btn-main-s:hover {
+  background-color: white;
+  color: #0075ff;
+}
+.btn-main-s {
+  font-size: 0.75rem;
+  padding: 0.35rem 1rem;
+}
+
+.btn-sec, .btn-sec-s {
+  font-size: 1.2rem;
+  padding: 0.4rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: 0.4s;
+  background-color: transparent;
+  border: none;
+  color: #000;
+}
+.btn-sec:hover, .btn-sec-s:hover {
+  color: #888;
+}
+.btn-sec-s {
+  font-size: 0.75rem;
+  padding: 0.35rem 1rem;
+}
+
+.main-menu {
+  margin-bottom: 0;
+}
+.main-menu li {
+  list-style: none;
+  display: inline;
+  margin-right: 2rem;
+  font-size: 1.2rem;
+}
+.main-menu li a {
+  color: #000;
+  text-decoration: none;
+}
+.main-menu li a:hover {
+  color: rgb(105, 103, 103);
+  text-decoration: underline;
+}
+
+/* Logo de la pagina*/
+.icon-sm i {
+  color: #0075ff;
+  font-size: 1.25rem;
+  margin-top: -6rem;
+  padding: 0.4rem 0.65rem;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 12px rgb(131, 126, 126);
+}
+
+/*tarjeta de secure storage*/
+.tarjeta {
+  text-align: center;
+}
+.tarjeta .title-description {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.tarjeta .icon {
+  color: #0075ff;
+  font-size: 3rem;
+  margin-bottom: -2rem;
+}
+.tarjeta .description-parrafo {
+  font-size: 0.85rem;
+  color: rgb(116, 110, 110);
+  font-weight: 500;
+}
+.tarjeta .cta {
+  font-size: 0.75rem;
+  color: #0075ff;
+  font-weight: 600;
+  margin-top: 4rem;
+}
+
+.icon-desc {
+  color: #0075ff;
+  font-size: 4.5rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.icon-desc .title2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  margin-top: -2rem;
+}
+
+/*# sourceMappingURL=componentes.css.map */

@@ -1,0 +1,129 @@
+@mixin btn-base {
+    font-size: 1.2rem;
+    padding:0.40rem 1.5rem;
+    border-radius: 0.25rem;
+    transition: .4s;
+}
+
+@mixin btn-sm {
+    font-size: 0.75rem;
+    padding:0.35rem 1rem;
+}
+
+$color-main: #0075ff;
+$color-footer: #f4f8fe;
+
+.container{
+    padding: 1.8rem;
+}
+
+.btn-main {
+    @include btn-base();
+    background-color: $color-main ;
+    color: white;
+    border:1px solid $color-main;
+
+    &:hover {
+        background-color: white;
+        color:$color-main;
+    }
+
+    &-s {
+        @extend .btn-main;
+        @include btn-sm();
+    }
+
+}
+
+.btn-sec {
+    @include btn-base();
+    background-color: transparent;
+    border:none;
+    color: #000;
+    &:hover {
+        color:#888;
+    }
+
+    &-s { 
+        @extend .btn-sec;
+        @include btn-sm();
+    }
+
+}
+
+.main-menu {
+    margin-bottom: 0;
+    li {
+        list-style: none;
+        display: inline;
+        margin-right: 2rem;
+        font-size: 1.2rem;
+        a {
+            color:#000;
+            text-decoration: none;
+            &:hover {
+                color: rgb(105, 103, 103);
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+/* Logo de la pagina*/
+.icon-sm {
+    i {
+        color: $color-main;
+        font-size: 1.25rem;
+        margin-top: -6rem;
+        padding: 0.4rem 0.65rem;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 0 0 12px rgb(131, 126, 126);
+    }
+
+}
+/*tarjeta de secure storage*/
+.tarjeta {
+    text-align: center;
+    .title-description {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .icon {
+        color:$color-main;
+        font-size: 3rem;
+        margin-bottom: -2rem;
+    }
+
+    .description-parrafo {
+        font-size: 0.85rem;
+        color:rgb(116, 110, 110);
+        font-weight: 500;
+    }
+
+    .cta {
+        font-size: 0.75rem;
+        color:$color-main;
+        font-weight: 600;
+        margin-top: 4rem;
+    }
+
+}
+
+.icon-desc {
+    color: $color-main;
+    font-size: 4.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .title2 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #000;
+        margin-top:-2rem;
+
+    }
+}
